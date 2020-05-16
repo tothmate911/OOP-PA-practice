@@ -7,7 +7,8 @@ public class DoubleHanger extends Hanger {
         return null;
     }
 
-    public Cloth putBottomCloth() {
-        return null;
+    @Override
+    public void putCloth(Cloth cloth) {
     }
+
 }

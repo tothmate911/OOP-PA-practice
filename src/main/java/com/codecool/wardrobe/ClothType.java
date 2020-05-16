@@ -7,4 +7,8 @@ public enum ClothType {
 
     private ClothType(boolean isUpper) {
     }
+
+    public boolean isUpper() {
+        return isUpper;
+    }
 }

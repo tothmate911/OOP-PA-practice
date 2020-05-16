@@ -6,6 +6,10 @@ public class Wardrobe {
     private List<Hanger> hangers;
     private int maxNumOfHangers;
 
+    public Wardrobe(int maxNumOfHangers) {
+        this.maxNumOfHangers = maxNumOfHangers;
+    }
+
     public void addHanger(Hanger hanger) {
     }
 

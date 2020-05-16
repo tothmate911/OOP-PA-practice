@@ -1,6 +1,6 @@
 package com.codecool.wardrobe;
 
-public class Cloth {
+public class Cloth implements Cloneable{
     private String brand;
     private ClothType type;
     private int id;
@@ -10,5 +10,14 @@ public class Cloth {
         this.brand = brand;
         this.type = type;
         id = nextId++;
+    }
+
+    public ClothType getType() {
+        return type;
+    }
+
+    @Override
+    public Cloth clone() throws CloneNotSupportedException {
+        return (Cloth) super.clone();
     }
 }

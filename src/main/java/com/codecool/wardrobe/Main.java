@@ -1,7 +1,10 @@
 package com.codecool.wardrobe;
 
 import com.codecool.wardrobe.cloth.Cloth;
+import com.codecool.wardrobe.cloth.ClothType;
 import com.codecool.wardrobe.hanger.DoubleHanger;
+import com.codecool.wardrobe.hanger.Hanger;
+import com.codecool.wardrobe.hanger.SingleHanger;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,8 +13,8 @@ public class Main {
         Cloth upperCloth = new Cloth("nike", ClothType.SHIRT);
         Cloth bottomCloth = new Cloth("adidas", ClothType.TROUSERS);
 
-        SingleHanger hanger = new SingleHanger();
-        SingleHanger doubleHanger = new DoubleHanger();
+        Hanger hanger = new SingleHanger();
+        Hanger doubleHanger = new DoubleHanger();
         DoubleHanger dh = new DoubleHanger();
 
         hanger.putCloth(upperCloth);

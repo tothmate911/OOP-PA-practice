@@ -58,5 +58,4 @@ public abstract class Hanger {
     }
 
     protected abstract boolean isPlaceForBottomCloth();
-
 }

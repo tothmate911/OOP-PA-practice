@@ -15,7 +15,7 @@ public class SingleHanger extends Hanger {
 
     @Override
     protected void putBottomCloth(Cloth cloth) {
-        System.out.println("Hanger only accepts upper clothes. If you want to put bottom clothes, use DoubleHanger");
+        System.out.println("SingleHanger only accepts upper clothes. If you want to put bottom clothes, use DoubleHanger");
     }
 
     @Override
@@ -23,4 +23,9 @@ public class SingleHanger extends Hanger {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "SingleHanger\n" +
+                "\t\tUpperCloth: " + (getUpperCloth() != null ? getUpperCloth().toString() : "");
+    }
 }

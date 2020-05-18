@@ -21,14 +21,14 @@ public class DoubleHanger extends Hanger {
         return tempCloth;
     }
 
-   @Override
+    @Override
     protected void putBottomCloth(Cloth cloth) {
-       if (bottomCloth == null) {
-           bottomCloth = cloth;
-           System.out.println("Bottom cloth successfully put on hanger");
-       } else {
-           System.out.println("There is a bottom cloth already on the Hanger. You cannot put on another.");
-       }
+        if (bottomCloth == null) {
+            bottomCloth = cloth;
+            System.out.println("Bottom cloth successfully put on DoubleHhanger");
+        } else {
+            System.out.println("There is a bottom cloth already on the Hanger. You cannot put on another.");
+        }
     }
 
     @Override
@@ -36,4 +36,10 @@ public class DoubleHanger extends Hanger {
         return bottomCloth == null;
     }
 
+    @Override
+    public String toString() {
+        return "DoubleHanger\n" +
+                "\t\tUpperCloth: " + (getUpperCloth() != null ? getUpperCloth().toString() : "") + "\n" +
+                "\t\tBottomCloth: " + (getBottomCloth() != null ? getBottomCloth().toString() : "");
+    }
 }

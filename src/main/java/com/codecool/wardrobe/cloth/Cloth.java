@@ -24,4 +24,9 @@ public class Cloth implements Cloneable{
     public int getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "id: " + id + ", brand: " + brand + ", type: " + type;
+    }
 }

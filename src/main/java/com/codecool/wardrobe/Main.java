@@ -15,7 +15,6 @@ public class Main {
 
         Hanger hanger = new SingleHanger();
         Hanger doubleHanger = new DoubleHanger();
-        DoubleHanger dh = new DoubleHanger();
 
         hanger.putCloth(upperCloth);
         hanger.putCloth(upperCloth);
@@ -28,9 +27,21 @@ public class Main {
         doubleHanger.putCloth(bottomCloth);
         System.out.println();
 
-        wardrobe.addHanger(dh);
         wardrobe.addHanger(hanger);
-        wardrobe.addHanger(hanger);
+        wardrobe.addHanger(doubleHanger);
+        wardrobe.addHanger(doubleHanger);
+        System.out.println();
+
+        System.out.println(wardrobe);
+        System.out.println(wardrobe.IsPlaceForCloth(ClothType.SHIRT));
+        System.out.println();
+
+        Cloth takenCloth = wardrobe.takeCloth(2);
+        takenCloth = wardrobe.takeCloth(0);
+        System.out.println(wardrobe);
+        System.out.println(wardrobe.IsPlaceForCloth(ClothType.SHIRT));
+
+
 
     }
 

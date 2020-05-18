@@ -32,7 +32,7 @@ public class Wardrobe {
         return false;
     }
 
-    public Cloth takeCloth(int id) throws CloneNotSupportedException {
+    public Cloth takeCloth(int id) {
         for (Hanger hanger : hangers) {
             if (hanger.getUpperCloth() != null && hanger.getUpperCloth().getId() == id) {
                 return hanger.takeUpperCloth();
@@ -40,6 +40,18 @@ public class Wardrobe {
                 return hanger.takeBottomCloth();
             }
         }
+        System.out.println("There is no cloth with the given id: " + id);
         return null;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Wardrobe size: ").append(maxNumOfHangers);
+        for (Hanger hanger : hangers) {
+            sb.append("\n\t").append(hanger.toString());
+        }
+        return sb.toString();
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.codecool.wardrobe;
+package com.codecool.wardrobe.cloth;
 
 public class Cloth implements Cloneable{
     private String brand;
@@ -19,5 +19,9 @@ public class Cloth implements Cloneable{
     @Override
     public Cloth clone() throws CloneNotSupportedException {
         return (Cloth) super.clone();
+    }
+
+    public int getId() {
+        return id;
     }
 }

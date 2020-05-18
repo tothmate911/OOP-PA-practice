@@ -1,5 +1,6 @@
 package com.codecool.wardrobe.hanger;
 
+import com.codecool.wardrobe.cloth.BottomCloth;
 import com.codecool.wardrobe.cloth.Cloth;
 
 public class DoubleHanger extends Hanger {
@@ -19,6 +20,16 @@ public class DoubleHanger extends Hanger {
         }
         bottomCloth = null;
         return tempCloth;
+    }
+
+    @Override
+    public void putCloth(BottomCloth bottomCloth) {
+        if (this.bottomCloth == null) {
+            this.bottomCloth = bottomCloth;
+            System.out.println("BottomCloth successfully put on DoubleHhanger");
+        } else {
+            System.out.println("There is a BottomCloth already on the Hanger. You cannot put on another.");
+        }
     }
 
     @Override

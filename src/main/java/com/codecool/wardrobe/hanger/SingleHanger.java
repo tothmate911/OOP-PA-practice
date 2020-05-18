@@ -1,5 +1,6 @@
 package com.codecool.wardrobe.hanger;
 
+import com.codecool.wardrobe.cloth.BottomCloth;
 import com.codecool.wardrobe.cloth.Cloth;
 
 public class SingleHanger extends Hanger {
@@ -11,6 +12,11 @@ public class SingleHanger extends Hanger {
     @Override
     public Cloth takeBottomCloth() {
         return null;
+    }
+
+    @Override
+    public void putCloth(BottomCloth bottomCloth) {
+        System.out.println("SingleHanger only accepts upper clothes. If you want to put bottom clothes, use DoubleHanger");
     }
 
     @Override

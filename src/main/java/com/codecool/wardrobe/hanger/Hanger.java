@@ -1,7 +1,9 @@
 package com.codecool.wardrobe.hanger;
 
+import com.codecool.wardrobe.cloth.BottomCloth;
 import com.codecool.wardrobe.cloth.Cloth;
 import com.codecool.wardrobe.cloth.ClothType;
+import com.codecool.wardrobe.cloth.UpperCloth;
 
 public abstract class Hanger {
     private Cloth upperCloth;
@@ -25,6 +27,17 @@ public abstract class Hanger {
     }
 
     public abstract Cloth takeBottomCloth();
+
+    public void putCloth(UpperCloth upperCloth) {
+        if (this.upperCloth == null) {
+            this.upperCloth = upperCloth;
+            System.out.println("UpperCloth successfully put on hanger");
+        } else {
+            System.out.println("There is an upper cloth already on the Hanger. You cannot put on another.");
+        }
+    }
+
+    public abstract void putCloth(BottomCloth bottomCloth);
 
     public void putCloth(Cloth cloth) {
         if (cloth.getType().isUpper) {

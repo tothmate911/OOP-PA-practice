@@ -4,9 +4,11 @@ import com.codecool.starfleet.Util;
 import com.codecool.starfleet.spaceCraft.Dockable;
 import com.codecool.starfleet.spaceCraft.Type;
 
+import java.util.HashMap;
+
 public class CargoShip extends MobileSpaceCraft {
     private static final int SPEED = 150;
-    private java.util.Map<Cargo, Integer> cargoMap;
+    private java.util.Map<Cargo, Integer> cargoMap = new HashMap<>();
 
     public CargoShip(String name, int yearOfBuilt) {
         super(name, yearOfBuilt);

@@ -1,13 +1,13 @@
 package com.codecool.starfleet.spaceCraft;
 
-import com.codecool.starfleet.SpaceCraftReporter;
 import com.codecool.starfleet.spaceCraft.mobileSpaceCraft.MobileSpaceCraft;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Function;
 
 public class SpaceStation extends SpaceCraft implements Dockable {
-    private Set<MobileSpaceCraft> dock;
+    private Set<MobileSpaceCraft> dock = new HashSet<>();
     private static final int MAX_DOCKING_SLOT_NUM = 2;
     private Function<Type, Set<SpaceCraft>> getSpaceCrafts;
 

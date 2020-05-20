@@ -9,8 +9,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Space implements SpaceCraftReporter, SpaceStationReporter {
-    private Set<MobileSpaceCraft> mobileSpaceCrafts;
-    private Set<SpaceStation> spaceStations;
+    private Set<MobileSpaceCraft> mobileSpaceCrafts = new HashSet<>();
+    private Set<SpaceStation> spaceStations = new HashSet<>();
 
     @Override
     public Set<SpaceStation> getAvailableStations() {

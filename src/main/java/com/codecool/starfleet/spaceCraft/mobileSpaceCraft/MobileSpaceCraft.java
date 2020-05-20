@@ -1,6 +1,5 @@
 package com.codecool.starfleet.spaceCraft.mobileSpaceCraft;
 
-import com.codecool.starfleet.SpaceCraftReporter;
 import com.codecool.starfleet.spaceCraft.Dockable;
 import com.codecool.starfleet.spaceCraft.SpaceCraft;
 import com.codecool.starfleet.spaceCraft.SpaceStation;
@@ -11,7 +10,6 @@ import java.util.function.Supplier;
 public abstract class MobileSpaceCraft extends SpaceCraft {
     protected int speed;
     private Supplier<Set<SpaceStation>> getAvailableStations;
-    private SpaceCraftReporter spaceCraftReporter;
 
     public MobileSpaceCraft(String name, int yearOfBuilt) {
         super(name, yearOfBuilt);

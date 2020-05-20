@@ -5,5 +5,6 @@ public class Main {
         Camp camp = new Camp();
 
 
+
     }
 }

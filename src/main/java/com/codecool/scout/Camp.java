@@ -34,7 +34,6 @@ public class Camp {
 
     public void simulateAPhase() {
         for (Troop troop : troops) {
-            troop.simulateADay();
             if (troop.isBuildingBuilt()) {
                 winnerTroop = troop;
                 break;

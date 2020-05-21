@@ -27,23 +27,24 @@ public class AssemblyLine {
     public void assembleForASecond() {
         for (AssemblyStage assemblyStage : assemblyStages) {
             if (assemblyStage.readyForNewConstruction()) {
-                Component componentConstructed = assemblyStage.getComponentBeingConstructed();
-                if (componentConstructed != null) {
-                    System.out.println("\nfinished " + componentConstructed + "\n");
-                    componentsUnderConstructionMap.put(componentConstructed, componentsUnderConstructionMap.get(componentConstructed) - 1);
-                    car.addComponent(componentConstructed);
+                Component componentConstructedByStage = assemblyStage.getComponentBeingConstructed();
+                if (componentConstructedByStage != null) {
+                    componentsUnderConstructionMap.put(componentConstructedByStage, componentsUnderConstructionMap.get(componentConstructedByStage) - 1);
+                    car.addComponent(componentConstructedByStage);
+                    assemblyStage.setComponentOfStageNull();
                 }
-
+                
                 Component nextComponent = whatIsTheNextNeededComponent();
                 if (nextComponent != null) {
                     assemblyStage.startConstructing(nextComponent);
                     componentsUnderConstructionMap.put(nextComponent, componentsUnderConstructionMap.getOrDefault(nextComponent, 0) + 1);
                 }
             }
-            assemblyStage.constructForASecond();
-            System.out.println();
+            assemblyStage.constructForASecond();            
         }
+        System.out.println();
     }
+
 
     public Component whatIsTheNextNeededComponent() {
         for (Component component : Car.getComponentsNeededMap().keySet()) {
